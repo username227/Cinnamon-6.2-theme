@@ -6,3 +6,5 @@ or
 <code>/home/<i>username</i>/.local/share/themes</code>
 
 If you are on Arch or an Arch-derivative, you can also download the package from releases, or install from the AUR [here](https://aur.archlinux.org/packages/cinnamon-6.2-theme).
+
+Then, you can apply the theme from within Cinnamon by opening up Themes from Settings.
