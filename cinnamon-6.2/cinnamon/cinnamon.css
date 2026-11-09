@@ -2189,3 +2189,114 @@ StScrollBar StButton#vhandle:hover {
     border: 2px solid #868686;
     border-radius: 99px;
 }
+
+
+/* BEGIN Cinnamon 6.8 compatibility additions
+ *
+ * Preserve the original Cinnamon 6.2.9 rules and assets above unchanged.
+ * These additional classes support Cinnamon's redesigned application menu
+ * introduced with Cinnamon 6.6 and tested with Cinnamon 6.8.
+ *
+ * Compatibility definitions only; not a visual redesign or enhancement.
+ */
+
+/* Redesigned applications menu (Cinnamon 6.6 onward). */
+.appmenu-background .popup-menu-content {
+    padding: 0px;
+}
+.appmenu-main-box {
+    spacing: 8px;
+}
+.appmenu-right-box {
+    spacing: 5px;
+    padding: 10px;
+}
+.appmenu-categories-applications-box {
+    spacing: 12px;
+}
+.appmenu-categories-applications-box:top {
+    padding-top: 5px;
+}
+.appmenu-applications-box {
+    padding-right: 5px;
+}
+.appmenu-search-box {
+    spacing: 8px;
+}
+.appmenu-sidebar {
+    padding: 8px 0px;
+    background-color: rgba(45,45,45,0.9);
+    border-right: 1px solid #666666;
+    border-radius: 8px 0px 0px 8px;
+}
+/* User profile header: keep the 6.2 avatar appearance, but give the
+ * avatar/name group the spacing used by Cinnamon 6.8 and move it slightly
+ * down within the menu sidebar.  This is intentionally menu-scoped.
+ */
+.appmenu-sidebar-user-box {
+    padding-top: 8px;
+}
+.appmenu-sidebar-user-box .user-widget.vertical {
+    spacing: 6px;
+}
+.appmenu-sidebar-button {
+    padding: 5px 7px;
+    margin: 0px 8px;
+    border-radius: 4px;
+}
+.appmenu-sidebar-button:hover {
+    background-color: rgba(255,255,255,0.15);
+}
+.appmenu-system-box {
+    spacing: 8px;
+}
+/* Preserve the original lock, logout and shutdown button colors:
+ * no appmenu-system-button overrides for the 6.2-inspired appearance.
+ */
+.appmenu-application-button,
+.appmenu-application-button-selected,
+.appmenu-category-button,
+.appmenu-category-button-selected,
+.appmenu-category-button-greyed {
+    padding: 7px;
+    border-radius: 4px;
+}
+.appmenu-application-button:hover,
+.appmenu-category-button:hover {
+    background-color: rgba(128,128,128,0.2);
+}
+.appmenu-application-button-selected,
+.appmenu-category-button-selected {
+    color: white;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.2);
+    background-gradient-end: rgba(255,255,255,0.08);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.06);
+}
+.appmenu-application-button:highlighted,
+.appmenu-application-button-selected:highlighted {
+    font-weight: bold;
+}
+.appmenu-application-button-label:ltr,
+.appmenu-category-button-label:ltr {
+    padding-left: 5px;
+}
+.appmenu-application-button-label:rtl,
+.appmenu-category-button-label:rtl {
+    padding-right: 5px;
+}
+.appmenu-application-button-description {
+    color: #c0c0c0;
+}
+.appmenu-category-button-greyed {
+    color: #9c9c9c;
+    font-style: italic;
+}
+.appmenu-category-button-greyed StIcon {
+    opacity: 0.5;
+}
+/* Preserve original search-field and icon colors and focus styling:
+ * no appmenu-search-entry overrides.
+ */
+
+/* END Cinnamon 6.8 compatibility additions */
